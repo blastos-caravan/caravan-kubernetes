@@ -7,16 +7,11 @@ spec:
   - host: local
     http:
       paths:
-      
+      - path: /mongoadmin
+        backend:
+          serviceName: mongo-express-service
+          servicePort: 8081
       # - path: /pgadmin
       #   backend:
       #     serviceName: pgadmin-service
       #     servicePort: 5050
-      # - path: /mongoadmin
-      #   backend:
-      #     serviceName: mongo-express-service
-      #     servicePort: 8081
-      # - path: /pyapi
-      #   backend:
-      #     serviceName: fullstack-backend
-      #     servicePort: 5000
