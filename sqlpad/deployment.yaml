@@ -16,10 +16,21 @@ spec:
         image: sqlpad/sqlpad:latest
         resources:
           limits:
-            memory: "128Mi"
+            memory: "512Mi"
             cpu: "500m"
         ports:
         - containerPort: 3000
+        env:
+        - name: SQLPAD_ADMIN
+          valueFrom:
+            secretKeyRef:
+              name: sqlpad-secret
+              key: sqlpad-root-email
+        - name: SQLPAD_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: sqlpad-secret
+              key: sqlpad-root-password  
         volumeMounts:
           - mountPath: /var/lib/sqlpad/data
             name: sqlpad
