@@ -12,7 +12,6 @@ spec:
     metadata:
       labels:
         role: mongo
-        environment: test
         replicaset: MainRepSet
     spec:
       terminationGracePeriodSeconds: 10

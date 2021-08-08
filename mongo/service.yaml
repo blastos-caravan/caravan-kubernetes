@@ -4,7 +4,8 @@ metadata:
   name: mongodb-service
 spec:
   selector:
-    app: mongodb
+    role: mongo
+  clusterIP: "None"
   ports:
   - port: 27017
     targetPort: 27017
