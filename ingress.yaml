@@ -14,3 +14,10 @@ spec:
             name: mongo-express-service
             port: 
               number: 8081
+      - path: /sqlpad
+        pathType: Prefix
+        backend:
+          service:
+            name: sqlpad-service
+            port:
+              number: 3000
