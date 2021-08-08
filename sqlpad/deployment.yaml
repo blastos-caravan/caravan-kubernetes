@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sqlpad
+spec:
+  selector:
+    matchLabels:
+      app: sqlpad
+  template:
+    metadata:
+      labels:
+        app: sqlpad
+    spec:
+      containers:
+      - name: sqlpad
+        image: sqlpad/sqlpad:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+          - mountPath: /var/lib/sqlpad/data
+            name: sqlpad
+      volumes:
+        - name: sqlpad
+          persistentVolumeClaim:
+            claimName: sqlpad-vol-claim

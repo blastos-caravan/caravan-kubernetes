@@ -1,0 +1,29 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: sqlpad-persistent-vol
+  labels:
+    type: local
+    app: sqlpad
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/sqlpad/data"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: sqlpad-vol-claim
+  labels:
+    app: sqlpad
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
