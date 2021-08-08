@@ -11,7 +11,8 @@ MongoDB
 MongoExpress 
 - UI for MongoDB
 
-PostgreSQL - SQL DB For Record Storage
+PostgreSQL
+- SQL DB For Record Storage
 
 MariaDB
 - High Performance SQL DB for High Speed Record Storage needs
