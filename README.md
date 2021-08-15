@@ -24,9 +24,9 @@ This is being tested in a minikube environment.
 ### Redis
 - An in-memory data store and message broker
 
-RabbitMQ
+### RabbitMQ
 - A message queue service
 
-Jenkins
+### Jenkins
 - An automation server
 
