@@ -5,8 +5,8 @@ This is being tested in a minikube environment.
 
 ## Included Resources
 MongoDB
-- Scalable Replicaset 
 - NoSQL DB for Document storage
+- Included resource is a single node cluster with files that can be used to generate a StatefulSet internally, which will allow for use of a MongoDB ReplicaSet from inside the cluster.
 
 MongoExpress 
 - UI for MongoDB
