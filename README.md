@@ -21,7 +21,7 @@ This is being tested in a minikube environment.
 ### SQLPad
 - A UI for PostgreSQL and MariaDB
 
-Redis
+### Redis
 - An in-memory data store and message broker
 
 RabbitMQ
