@@ -32,7 +32,7 @@ spec:
                 name: mongodb-secret
                 key: mongo-root-password
           - name: ME_CONFIG_MONGODB_URL
-            value: mongodb://mongod-0.mongodb-service.default.svc.cluster.local:27017,mongod-1.mongodb-service.default.svc.cluster.local:27017,mongod-2.mongodb-service.default.svc.cluster.local:27017/?replicaSet=MainRepSet
+            value: mongodb://mongod-0.mongodb-service.default.svc.cluster.local/?replicaSet=MainRepSet
           - name: ME_CONFIG_MONGODB_ENABLE_ADMIN
             value: "true"
           - name: ME_CONFIG_OPTIONS_EDITORTHEME
