@@ -11,9 +11,13 @@ spec:
       labels:
         app: jenkins
     spec:
+      securityContext:
+        runAsUser: 0
+        fsGroup: 1000
+        runAsGroup: 1000
       containers:
       - name: jenkins
-        image: jenkins/jenkins:lts-jdk11
+        image: jenkins/jenkins:lts
         resources:
           limits:
             memory: "512Mi"
@@ -23,3 +27,10 @@ spec:
           name: dashboard-node
         - containerPort: 50000
           name: executor-node
+        volumeMounts:
+          - mountPath: /var/jenkins_home
+            name: jenkins-home
+      volumes:
+        - name: jenkins-home
+          persistentVolumeClaim:
+            claimName: jenkins-vol-claim
