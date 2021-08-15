@@ -37,3 +37,10 @@ spec:
             name: redis-service
             port:
               number: 6379
+      - path: /rabbitmq
+        pathType: Prefix
+        backend:
+          service:
+            name: rabbitmq-service
+            port:
+              number: 5672
