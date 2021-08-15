@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rabbitmq-service
+  name: jenkins-service
 spec:
   type: LoadBalancer
   selector:
-    app: rabbitmq
+    app: jenkins
   ports:
   - protocol: TCP
-    port: 5672
-    targetPort: 5672
-    nodePort: 30004
+    port: 4200
+    targetPort: 8080
+    nodePort: 30005

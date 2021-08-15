@@ -44,3 +44,10 @@ spec:
             name: rabbitmq-service
             port:
               number: 5672
+      - path: /jenkins
+        pathType: Prefix
+        backend:
+          service:
+            name: jenkins-service
+            port:
+              number: 4200
