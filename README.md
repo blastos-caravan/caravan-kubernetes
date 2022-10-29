@@ -1,7 +1,18 @@
 # Caravan Kubernetes
 This is a set of K8s resources that will help standardize and expedite spinning up resources.
 
-This is being tested in a minikube environment. It is also NOT production ready, and should only be used for development purposes. Steps will be taken to get this production ready.
+This is being tested in a minikube environment. It is also NOT production ready, and should only be used for development purposes.
+
+## Use in Docker Desktop Kubernetes
+ - Clone Repository
+ - Within the repository directory, use kubectl apply -f . -R to apply all resources.
+ - Use kubectl proxy to enable use of internal resources.
+   - localhost:8081 - Mongo Express
+   - localhost:3000 - SQLPad
+   - localhost:27017 - MongoDB
+   - localhost:6379 - Redis
+   - localhost:5672 - RabbitMQ
+   - localhost:4200 - Jenkins
 
 ## Included Resources
 ### MongoDB
